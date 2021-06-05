@@ -11,19 +11,17 @@ app.use(bodyParser.json());
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    setTimeout(() => {
-        if(username === 'admin' && password === 'admin') {
-            return res.send({
-                success: true,
-                token
-            })
-        }
-    
-        res.send({
-            success: false,
-            error: 'username or password wrong!'
+    if(username === 'admin' && password === 'admin') {
+        return res.send({
+            success: true,
+            token
         })
-    }, 1000);
+    }
+
+    res.send({
+        success: false,
+        error: 'username or password wrong!'
+    });
 });
 
 app.get('/users/me', (req, res) => {

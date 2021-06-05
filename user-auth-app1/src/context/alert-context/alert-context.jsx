@@ -4,6 +4,9 @@ const AlertsStateContext = React.createContext();
 
 export function useAlertsState() {
     const context = useContext(AlertsStateContext);
+    if(!context) {
+        throw Error('useAlertsState most use with an AlertsProvider!');
+    }
     return context;
 }
 

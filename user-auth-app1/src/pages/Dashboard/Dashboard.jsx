@@ -6,7 +6,7 @@ import PageTitle from '../../components/PageTitle';
 import { useAuthDispatch } from '../../context/auth-context';
 import UserInfo from './UserInfo';
 import { logout } from '../Login/dispatches';
-import { useAlertsState } from '../../context/alert-context/alert-context';
+import { useAlertsState } from '../../context/alert-context';
 
 const Dashboard = () => {
     const dispatch = useAuthDispatch();

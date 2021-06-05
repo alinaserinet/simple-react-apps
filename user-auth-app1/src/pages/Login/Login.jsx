@@ -7,7 +7,7 @@ import { useAuthDispatch, useAuthState } from '../../context/auth-context';
 import { fetchCurrentUserData, fetchToken } from '../../services/axios';
 import { loginError, loginRequest, loginSuccess } from './dispatches';
 import BoxBorder from '../../components/BoxBorder';
-import { useAlertsState } from '../../context/alert-context/alert-context';
+import { useAlertsState } from '../../context/alert-context';
 
 
 
